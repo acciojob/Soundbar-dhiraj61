@@ -10,7 +10,7 @@ btn.forEach((btn)=>{
 		}
 		
 		let sound = btn.textContent;
-		aud = new Audio(`sounds/${sound}.wav`);
+		aud = new Audio(`sounds/${sound}.mp3`);
 		aud.play();
 	})
 })
