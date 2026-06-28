@@ -1,6 +1,6 @@
 //your JS code here. If required.
 let btn = document.querySelectorAll('.btn');
-let stop = document.getElementByClassName('stop');
+let stop = document.getElementsByClassName('stop');
 let aud;
 btn.forEach((btn)=>{
 	btn.addEventListener('click',()=>{
