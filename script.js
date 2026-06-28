@@ -1,23 +1,21 @@
 //your JS code here. If required.
 let btn = document.querySelectorAll('.btn');
 let stop = document.getElementsByClassName('stop');
-let aud = null;
+
+const audio = document.createElement("audio");
+document.body.appendChild(audio);
+
 btn.forEach((btn)=>{
 	btn.addEventListener('click',()=>{
-		if(aud){
-			aud.pause();
-			aud.currentTime = 0;
-		}
-		
-		let sound = btn.textContent;
-		aud = new Audio(`sounds/${sound}.mp3`);
-		aud.play();
+		let sound = btn.textContent.trim();
+		audio.pause();
+		audio.currentTime = 0;
+		audio.src = `sounds/${sound}.mp3`;
+		audio.play();
 	})
 })
 
 stop[0].addEventListener('click',()=>{
-	if(aud){
-		aud.pause();
-		aud.currentTime = 0;		
-	}
+		audio.pause();
+		audio.currentTime = 0;		
 })
